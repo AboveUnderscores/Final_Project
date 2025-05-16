@@ -57,7 +57,7 @@
                                 $_SESSION["loggedin"] = true;
                                 $_SESSION["id"] = $id;
                                 $_SESSION['username'] = $username;
-                                header('location:welcome.php');
+                                header('location:home.php');
                             } else {
                                 //Password was not valid
                                 $login_err = "Invalid password";

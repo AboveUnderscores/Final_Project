@@ -107,7 +107,7 @@
         <form action="register.php" method="post">
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"" name="username" value="<?= $username?>"
+                <input type="text" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" value="<?= $username?>"
 
                 >
                 <span class="invalid_feedback"><?= $username_err?></span>

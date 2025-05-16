@@ -3,7 +3,7 @@
 
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]===true)
     {
-        header('location:welcome.php');
+        header('location:home.php');
         exit;
     }
 
@@ -23,13 +23,13 @@
         if (empty(trim($_POST["username"]))) {
             $username_err = "Please enter a username.";
         } else {
-            $username = empty(trim($_POST["username"]));
+            $username = (trim($_POST["username"]));
         }
         //make sure they put in a pw
         if (empty(trim($_POST['password']))) {
             $pw_err = "Please enter your password!";
         } else {
-            $password = empty(trim($_POST['password']));
+            $password = (trim($_POST['password']));
         }
         if (empty($username_err) && empty($pw_err)) {
             echo "<p>Username and password entered</p>";
@@ -52,9 +52,8 @@
                             $hashed_pw = $row['password'];
                             if (password_verify($password, $hashed_pw)) //check if the hashes match
                             {
-                                echo "<p>password</p>";
+                                //echo "<p>password</p>";
                                 //This person should be logged in!
-                                session_start();
                                 $_SESSION["loggedin"] = true;
                                 $_SESSION["id"] = $id;
                                 $_SESSION['username'] = $username;

@@ -1,1 +1,90 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
 
+.navbar_bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.auth_button:hover {
+    border-color: #d2302c;
+    color: #d2302c;
+}
+
+.message_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/quiz_background.png");
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.message_container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    padding: 100px 50px;
+    margin: 0;
+}
+
+.library_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    height: auto;
+}
+
+.card_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 15px;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_message {
+    font-family: "Comic Sans", sans-serif;
+    text-align: center;
+}
+
+.get_started_button {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #da3632;
+    transition: transform 0.2s ease;
+}
+
+.get_started_button .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.get_started_button:hover {
+    transform: scale(1.01);
+}
+
+.get_started_button:hover .arrow {
+    transform: translateX(5px);
+}
